@@ -1,6 +1,11 @@
 # Prerequisites
 *.d
 
+AutomaticDifferentiationPython/venv/
+AutomaticDifferentiationC++/AutomaticDifferentiationC++/.vs
+AutomaticDifferentiationC++/AutomaticDifferentiationC++/Debug
+.xml
+
 # Compiled Object files
 *.slo
 *.lo

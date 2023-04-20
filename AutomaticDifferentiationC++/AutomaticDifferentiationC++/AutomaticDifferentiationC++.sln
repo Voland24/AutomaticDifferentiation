@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutomaticDifferentiationC++", "AutomaticDifferentiationC++.vcxproj", "{B6861640-3D0F-4F83-A833-5F853275A1FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6861640-3D0F-4F83-A833-5F853275A1FD}.Debug|x64.ActiveCfg = Debug|x64
+		{B6861640-3D0F-4F83-A833-5F853275A1FD}.Debug|x64.Build.0 = Debug|x64
+		{B6861640-3D0F-4F83-A833-5F853275A1FD}.Debug|x86.ActiveCfg = Debug|Win32
+		{B6861640-3D0F-4F83-A833-5F853275A1FD}.Debug|x86.Build.0 = Debug|Win32
+		{B6861640-3D0F-4F83-A833-5F853275A1FD}.Release|x64.ActiveCfg = Release|x64
+		{B6861640-3D0F-4F83-A833-5F853275A1FD}.Release|x64.Build.0 = Release|x64
+		{B6861640-3D0F-4F83-A833-5F853275A1FD}.Release|x86.ActiveCfg = Release|Win32
+		{B6861640-3D0F-4F83-A833-5F853275A1FD}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52CE1226-BF1B-476B-B4C0-B74C54D8E398}
+	EndGlobalSection
+EndGlobal

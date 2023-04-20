@@ -1,0 +1,39 @@
+This will be an explanation of how graphs are used to compute partial derivatives of functions. Libraries like Tensorflow and Pytorch
+use this approach when calculating derivatives. This is useful in algorithms like backpropagation, the essential algorithm in ML.
+When calculating partial derivatives of the outputs with respect to the inputs of a neural network, we use the chian rule which
+propagates gradient through the functions.
+
+One approach of doing this would be via an analytical answer i.e. calculating the limit with which a gradient is defined.
+However, for large tensor which are also multidimensional this is simply not feasible.
+Another would be using the chain rule. What does this mean?
+The core idea here is to take some unknown, complex function and try to break it down via composition into functions we "know".
+Here "know" just means they are fairly simple functions that have simple and well-defined derivatives.
+E.g.  imagine f = x*y + z, and we want partial derivatives with respect to x,y and z.
+This function is just a composition of two functions, addition and multiplication, and we know the derivatives for those
+
+So f becomes f = add(mul(x,y), z) and we get a sort of graphs of execution where we first multiply the two variables and the add them with the
+third to evaluate the term.
+
+Then, the derivative of f becomes df/dx = df/dmul(x,y) * dmul(x,y)/dx
+
+In order for this to work, we need to define what the nodes of the computational graph will be and how to connect the edges in order
+to evaluate the derivative.
+
+There are 4 different types of nodes here:
+
+1) Variables - mutable tensors of which we want to know the derivatives of
+2) Constants - immutable tensors
+3) Placeholders - empty slots that specify where a future variable or constant will be placed
+4) Operators - these will be the nodes of the graph
+
+The node (operator) will take some input values and return a single ouput value. Tensors are considered to be a single value, even though they are multidimensional.
+Scalar tensors are 1D tensor, also known as numbers to those people who have a social life.
+
+So in order to represent the function f = x*y + z we create a graphs with the nodes mul and add, and the tensors x,y,z flow through the
+graph in a forward fashion, until the end. This composition of functions can be represented via a graph.
+When calculating a derivative, we will do the same thing only go backwards.
+NOTE: we add the computation df/df = 1 at the end, which helps in the backwards pass of tensors.
+
+Flowing backwards through the graph, evaluating local gradients using the chain rule as we go from the output to the inputs,
+we compute all the partial derivatives of the values we want.
+

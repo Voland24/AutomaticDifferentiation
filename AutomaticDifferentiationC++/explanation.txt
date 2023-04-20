@@ -1,0 +1,18 @@
+Automatic differantiation is a tool which allows us to calculate, better said evaluate, the
+partial derivative of a function that is differentiable at a specific value.
+This proves to be immensely helpful in Machine learning, specifically in a algorithm called
+backpropagation, which is the core idea behind machine learning.
+Adam, SGD, an other optimization algorithm utilize this tool to evaluate the gradients of 
+the loss function and set the weights and bias terms of a neural network.
+
+This is the explanation for the C++ implementatin. Beside it, there will be a Pythom implementation
+as well, which will work using a different approach than the C++ version.
+
+In C++ we will use a technique that employs dual numbers. Dual numbers are very simillar to
+complex ones in the sense that they too have to be arbitaraly defined.
+Dual numbers are in the form of d = a + b*epsilon, where epslion != 0 and epslion**2 == 0
+where both a and b are real numbers.
+We will write them in the form of z = x + x' * epsilon, where x' is the derivative of x.
+It will be 1 when it's the derivative with respect to itself, and 0 when it's with respect
+to some other variable.
+The addition, subtraction, multiplication and division are able to be defined on this space.
